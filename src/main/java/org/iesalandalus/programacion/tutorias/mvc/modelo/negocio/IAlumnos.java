@@ -8,6 +8,10 @@ import org.iesalandalus.programacion.tutorias.mvc.modelo.dominio.Alumno;
 
 public interface IAlumnos {
 
+	void comenzar();
+
+	void terminar();
+	
 	List<Alumno> get();
 
 	int getTamano();
