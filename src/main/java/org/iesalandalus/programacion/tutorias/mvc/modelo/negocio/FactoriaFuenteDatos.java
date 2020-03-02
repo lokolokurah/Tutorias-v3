@@ -1,6 +1,6 @@
 package org.iesalandalus.programacion.tutorias.mvc.modelo.negocio;
 
-import org.iesalandalus.programacion.tutorias.mvc.modelo.negocio.memoria.FactoriaFuenteDatosMemoria;
+import org.iesalandalus.programacion.tutorias.mvc.modelo.negocio.ficheros.FactoriaFuenteDatosMemoria;
 
 public enum FactoriaFuenteDatos {
 

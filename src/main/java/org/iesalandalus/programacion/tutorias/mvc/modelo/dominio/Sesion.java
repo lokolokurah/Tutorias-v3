@@ -1,12 +1,13 @@
 package org.iesalandalus.programacion.tutorias.mvc.modelo.dominio;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.util.Objects;
 
-public class Sesion {
+public class Sesion implements Serializable {
 
 	private static final LocalTime HORA_COMIENZO_CLASES = LocalTime.of(16, 00);
 	private static final LocalTime HORA_FIN_CLASES = LocalTime.of(22, 15);

@@ -1,10 +1,11 @@
 package org.iesalandalus.programacion.tutorias.mvc.modelo.dominio;
 
+import java.io.Serializable;
 import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Profesor {
+public class Profesor implements Serializable {
 	
 	private static final String ER_NOMBRE = "([a-zA-ZÁÉÍÓÚáéíóú]+)(\\s+([a-zA-ZÁÉÍÓÚáéíóú]+))+";
 	private static final String ER_DNI = "([0-9]{8})([A-Za-z])";

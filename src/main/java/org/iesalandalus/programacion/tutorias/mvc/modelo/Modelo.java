@@ -15,11 +15,11 @@ import org.iesalandalus.programacion.tutorias.mvc.modelo.negocio.IFuenteDatos;
 import org.iesalandalus.programacion.tutorias.mvc.modelo.negocio.IProfesores;
 import org.iesalandalus.programacion.tutorias.mvc.modelo.negocio.ISesiones;
 import org.iesalandalus.programacion.tutorias.mvc.modelo.negocio.ITutorias;
-import org.iesalandalus.programacion.tutorias.mvc.modelo.negocio.memoria.Alumnos;
-import org.iesalandalus.programacion.tutorias.mvc.modelo.negocio.memoria.Citas;
-import org.iesalandalus.programacion.tutorias.mvc.modelo.negocio.memoria.Profesores;
-import org.iesalandalus.programacion.tutorias.mvc.modelo.negocio.memoria.Sesiones;
-import org.iesalandalus.programacion.tutorias.mvc.modelo.negocio.memoria.Tutorias;
+import org.iesalandalus.programacion.tutorias.mvc.modelo.negocio.ficheros.Alumnos;
+import org.iesalandalus.programacion.tutorias.mvc.modelo.negocio.ficheros.Citas;
+import org.iesalandalus.programacion.tutorias.mvc.modelo.negocio.ficheros.Profesores;
+import org.iesalandalus.programacion.tutorias.mvc.modelo.negocio.ficheros.Sesiones;
+import org.iesalandalus.programacion.tutorias.mvc.modelo.negocio.ficheros.Tutorias;
 
 public class Modelo implements IModelo {
 	

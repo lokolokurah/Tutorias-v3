@@ -1,8 +1,9 @@
 package org.iesalandalus.programacion.tutorias.mvc.modelo.dominio;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Tutoria {
+public class Tutoria implements Serializable {
 
 	private String nombre;
 	private Profesor profesor;	

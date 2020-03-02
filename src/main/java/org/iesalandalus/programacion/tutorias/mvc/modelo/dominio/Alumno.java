@@ -1,8 +1,9 @@
 package org.iesalandalus.programacion.tutorias.mvc.modelo.dominio;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Alumno {
+public class Alumno implements Serializable {
 
 	private static final String ER_NOMBRE = "([a-zA-ZÁÉÍÓÚáéíóú]+)(\\s+([a-zA-ZÁÉÍÓÚáéíóú]+))+";
 	private static final String PREFIJO_EXPEDIENTE = "SP_";

@@ -1,4 +1,4 @@
-package org.iesalandalus.programacion.tutorias.mvc.modelo.negocio.memoria;
+package org.iesalandalus.programacion.tutorias.mvc.modelo.negocio.ficheros;
 
 import org.iesalandalus.programacion.tutorias.mvc.modelo.negocio.IAlumnos;
 import org.iesalandalus.programacion.tutorias.mvc.modelo.negocio.ICitas;
