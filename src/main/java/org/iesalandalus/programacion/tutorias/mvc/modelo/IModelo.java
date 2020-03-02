@@ -11,6 +11,10 @@ import org.iesalandalus.programacion.tutorias.mvc.modelo.dominio.Sesion;
 import org.iesalandalus.programacion.tutorias.mvc.modelo.dominio.Tutoria;
 
 public interface IModelo {
+	
+	void comenzar();
+	
+	void terminar();
 
 	void insertar(Alumno alumno) throws OperationNotSupportedException;
 
