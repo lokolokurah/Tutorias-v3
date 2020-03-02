@@ -35,12 +35,14 @@ public class Controlador implements IControlador {
 	@Override
 	public void comenzar() 
 	{
+		modelo.comenzar();
 		vista.comenzar();
 	}
 
 	@Override
 	public void terminar() 
 	{
+		modelo.terminar();
 		System.out.println("Fin de la ejecución.");
 	}
 
