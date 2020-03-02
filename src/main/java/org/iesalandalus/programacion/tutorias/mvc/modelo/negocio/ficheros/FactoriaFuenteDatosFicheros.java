@@ -7,7 +7,7 @@ import org.iesalandalus.programacion.tutorias.mvc.modelo.negocio.IProfesores;
 import org.iesalandalus.programacion.tutorias.mvc.modelo.negocio.ISesiones;
 import org.iesalandalus.programacion.tutorias.mvc.modelo.negocio.ITutorias;
 
-public class FactoriaFuenteDatosMemoria implements IFuenteDatos {
+public class FactoriaFuenteDatosFicheros implements IFuenteDatos {
 
 	@Override
 	public IAlumnos crearAlumnos() 
