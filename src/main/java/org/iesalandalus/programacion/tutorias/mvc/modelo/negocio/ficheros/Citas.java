@@ -1,5 +1,13 @@
 package org.iesalandalus.programacion.tutorias.mvc.modelo.negocio.ficheros;
 
+import java.io.EOFException;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -16,11 +24,54 @@ import org.iesalandalus.programacion.tutorias.mvc.modelo.negocio.ICitas;
 
 public class Citas implements ICitas {
 	
+	private static final String NOMBRE_FICHERO_CITAS = "datos/citas.dat";
+	
 	private List<Cita> coleccionCitas;
 	
 	public Citas() 
 	{
 		coleccionCitas = new ArrayList<>();
+	}
+	
+	@Override
+	public void comenzar() 
+	{
+		//Leer
+		File ficheroCitas = new File(NOMBRE_FICHERO_CITAS);
+		try (ObjectInputStream entrada = new ObjectInputStream(new FileInputStream(ficheroCitas))) {
+			Cita cita = null;
+			do 
+			{
+				cita = (Cita) entrada.readObject();
+				insertar(cita);
+			} while (cita != null);
+		} catch (ClassNotFoundException e) {
+			System.out.println("No puedo encontrar la clase que tengo que leer.");
+		} catch (FileNotFoundException e) {
+			System.out.println("No puedo abrir el fichero de citas.");
+		} catch (EOFException e) {
+			System.out.println("Fichero citas leído satisfactoriamente.");
+		} catch (IOException e) {
+			System.out.println("Error inesperado de Entrada/Salida.");
+		} catch (OperationNotSupportedException e) {
+			System.out.println(e.getMessage());
+		}
+	}
+
+	@Override
+	public void terminar() 
+	{
+		//Escribir
+		File ficheroCitas = new File(NOMBRE_FICHERO_CITAS);
+		try (ObjectOutputStream salida = new ObjectOutputStream(new FileOutputStream(ficheroCitas))){
+			for (Cita cita : coleccionCitas)
+				salida.writeObject(cita);
+			System.out.println("Fichero citas escrito satisfactoriamente.");
+		} catch (FileNotFoundException e) {
+			System.out.println("No puedo crear el fichero de citas.");
+		} catch (IOException e) {
+			System.out.println("Error inesperado de Entrada/Salida.");
+		}
 	}
 	
 	@Override
